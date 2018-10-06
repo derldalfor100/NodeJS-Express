@@ -1,0 +1,21 @@
+body {
+  /*padding: 50px;*/
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+p {
+  padding-left:4em;
+}
+
+h1, h2, h3 {
+  padding-left:0.3em;
+}
+
+form {
+  margin-left: 4em;
+  margin-right: 4em;
+}
