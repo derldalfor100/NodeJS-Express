@@ -67,7 +67,12 @@ app.use(ExpressValidator({
 //connect-flash
 app.use(require('connect-flash')());
 app.use(function (req, res, next) {
-  res.locals.messages = require('express-messages')(req, res);
+  res.locals.messages = require('express-messages')(req, res);// declare a global variable named: messages
+  next();
+});
+
+app.get('*', function(req, res, next){
+  res.locals.user = req.user || null;// declare a global variable named: user
   next();
 });
 

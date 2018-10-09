@@ -20,6 +20,12 @@ router.get('/login', function(req, res, next) {
   res.render('login', { title: 'Login' });
 });
 
+router.get('/logout', function(req, res){
+  req.logout();
+  req.flash('success', 'You are now logged out');
+  res.redirect('/users/login');
+});
+
 // POST - a request to update the server.
 router.post('/login',
   passport.authenticate('local', {failureRedirect: '/users/login', failureFlash: 'Invalid username or password'}),
