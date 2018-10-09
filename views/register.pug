@@ -6,6 +6,9 @@ block content
   br
   br
   p Please register using the form below
+  if errors
+    each error, i in errors
+        .alert.alert-danger #{error.msg}
   br
   form(method='post', action='/users/register', enctype='multipart/form-data')
     .form-group
